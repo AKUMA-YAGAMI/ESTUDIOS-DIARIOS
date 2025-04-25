@@ -263,7 +263,7 @@ Calcula el ingreso total generado por todos los productos (precio × vendidos) u
   
   */
 
-
+/*
 let transacciones = [
     { id: 1, tipo: "venta", monto: 1200 },
     { id: 2, tipo: "venta", monto: 50 },
@@ -302,7 +302,7 @@ let compT = compraT.length;
 
 
 console.log(compT);
-console.log(devoT)
+console.log(devoT) */
 
   /*
 
@@ -313,7 +313,7 @@ Contar cuántas ventas y cuántas devoluciones hubo.
 Mostrar un array de los id de las transacciones cuyo monto fue mayor a 500.*/
 
 
-
+/*
 
 let transacciones3 = [
     { id: 1, tipo: "venta", monto: 1200 },
@@ -352,6 +352,160 @@ let productos = [
   let mayuscula = filtrale.map(num => num.nombre.toUpperCase())
 
   console.log(mayuscula)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  let edades = [12, 25, 8, 32, 17, 45];
+let newArray = []
+for (filtra of edades){
+  if(filtra >= 18){
+newArray.push(filtra)
+  }
+}
+
+
+
+
+
+console.log(newArray); // [25, 32, 45]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let mayoresDeEdad = [12, 25, 8, 32, 17, 45]
+
+let otroA = []
+
+for (venfa of mayoresDeEdad){
+  if (venfa >= 18 ){
+    otroA.push(venfa)
+  }
+}
+
+console.log(otroA)
+
+
+
+
+
+function mayoresDeEdad(edades) {
+  let resultado = [];
+  for (let edad of edades) {
+    if (edad >= 18) {
+      resultado.push(edad);
+    }
+  }
+  return resultado;
+}
+
+console.log(mayoresDeEdad([12, 25, 8, 32, 17, 45]));
+
+
+
+
+
+
+
+
+let productos4 = [
+  { nombre: "Laptop", precio: 1200 },
+  { nombre: "Mouse", precio: 25 },
+  { nombre: "Teclado", precio: 75 },
+  { nombre: "Monitor", precio: 300 },
+  { nombre: "USB", precio: 10 }
+];
+
+function productosCaros(productos4){
+
+  let newAaa = []
+for (pro of productos4)
+  if (pro.precio > 100){
+    newAaa.push(pro.precio)
+  }
+
+return newAaa
+  }
+
+  console.log(productosCaros(productos4)) */
+
+/*
+  let libros = [
+    { titulo: "El señor de los anillos", paginas: 1178 },
+    { titulo: "Cien años de soledad", paginas: 417 },
+    { titulo: "Rebelión en la granja", paginas: 112 },
+    { titulo: "Harry Potter y la piedra filosofal", paginas: 309 },
+    { titulo: "El principito", paginas: 96 }
+  ];
+
+
+
+
+
+let newFilter = libros.filter(function filtrador(libro) {
+  return libro.paginas > 300 && libro.titulo.length > 10;
+});
+
+console.log(newFilter); */
+
+
+let operaciones = [
+  { tipo: "venta", categoria: "electronica", monto: 1200 },
+  { tipo: "venta", categoria: "hogar", monto: 300 },
+  { tipo: "devolución", categoria: "electronica", monto: 1200 },
+  { tipo: "venta", categoria: "ropa", monto: 150 },
+  { tipo: "devolución", categoria: "ropa", monto: 150 },
+  { tipo: "venta", categoria: "hogar", monto: 500 },
+  { tipo: "venta", categoria: "electronica", monto: 800 }
+];
+
+let ventas1 = operaciones.filter(num => num.tipo === "venta");
+let devo1 = operaciones.filter(num => num.tipo === "devolución");
+
+console.log(`Estas son las ventas: ${JSON.stringify(ventas1)}`);
+console.log(`Estas son las devoluciones: ${JSON.stringify(devo1)}`);
+
+
+/*
+Crear un nuevo array que contenga solo las ventas (no devoluciones).
+
+Crear un array con las devoluciones únicamente.
+
+Obtener la suma total de ventas.
+
+Obtener la suma total de devoluciones.
+
+Mostrar un mensaje personalizado en consola como este:
+"Ganancia neta: $X (Ventas: $Y - Devoluciones: $Z)" */
+
+
+
+
+
+
+
 
 
 
