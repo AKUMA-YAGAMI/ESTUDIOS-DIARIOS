@@ -470,7 +470,7 @@ let newFilter = libros.filter(function filtrador(libro) {
 
 console.log(newFilter); */
 
-
+/*
 let operaciones = [
   { tipo: "venta", categoria: "electronica", monto: 1200 },
   { tipo: "venta", categoria: "hogar", monto: 300 },
@@ -485,7 +485,7 @@ let ventas1 = operaciones.filter(num => num.tipo === "venta");
 let devo1 = operaciones.filter(num => num.tipo === "devolución");
 
 console.log(`Estas son las ventas: ${JSON.stringify(ventas1)}`);
-console.log(`Estas son las devoluciones: ${JSON.stringify(devo1)}`);
+console.log(`Estas son las devoluciones: ${JSON.stringify(devo1)}`);  */
 
 
 /*
@@ -499,6 +499,53 @@ Obtener la suma total de devoluciones.
 
 Mostrar un mensaje personalizado en consola como este:
 "Ganancia neta: $X (Ventas: $Y - Devoluciones: $Z)" */
+
+
+
+/*
+
+
+let productos = [
+  { nombre: "Laptop", precio: 1200 },
+  { nombre: "Mouse", precio: 25 },
+  { nombre: "Teclado", precio: 75 },
+  { nombre: "Monitor", precio: 300 },
+  { nombre: "USB", precio: 10 }
+];
+
+let newA = productos.filter(num => num.precio > 100);
+let newM = newA.map(num => num.nombre.toUpperCase());
+
+console.log(newM);
+*/
+
+
+
+
+
+
+
+
+
+
+let empleados = [
+  { nombre: "Laura", sueldo: 1200, activo: true },
+  { nombre: "Carlos", sueldo: 950, activo: false },
+  { nombre: "Marta", sueldo: 1100, activo: true },
+  { nombre: "Luis", sueldo: 1050, activo: true },
+  { nombre: "Ana", sueldo: 990, activo: false }
+];
+
+let activosF = empleados.filter(num => num.activo === true)
+
+let nombresM = activosF.map(num => num.nombre.toUpperCase())
+
+let totalS = activosF.reduce((acum, num) =>acum + num.sueldo, 0 )
+
+
+console.log(` Los trabajadores activos actualmentre son ${nombresM} los cuales tienen un sueldo combinado de $ ${totalS}`)
+
+
 
 
 
