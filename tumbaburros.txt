@@ -1,0 +1,43 @@
+**Semana 1 – Fundamentos Sólidos de JavaScript**
+Día 1: Loops + lógica (for, while, do...while, break, continue)
+Día 2: Arrays + funciones básicas (push, pop, shift, unshift, slice, splice)
+Día 3: Objetos + métodos (crear objetos, acceder/modificar propiedades, métodos, this)
+Día 4: Clases + instancias (class, constructor, instanciar, herencia básica)
+Día 5: DOM + eventos (getElementById, querySelector, addEventListener)
+Día 6: Funciones avanzadas (arrow functions, callbacks, scope, closures)
+Día 7: Async/await + APIs + mini proyecto final
+
+**Semana 2 – Dominio avanzado de JavaScript y testing**
+Día 1: Revisar objetos y clases (refuerzo de find, filter, map, reduce, this)
+Día 2: Módulos en JavaScript (import/export, estructura de archivos)
+Día 3: Pruebas con Mocha y TDD (describe, it, assert)
+Día 4: Manejo de errores (try/catch, throw, finally)
+Día 5: Estructura de proyectos, buenas prácticas
+Día 6: Proyecto integrador con pruebas
+Día 7: Revisión + mejora del código + documentación
+
+**Temario basado en Codecademy (completado):**
+
+* Sintaxis básica: variables, tipos de datos, condicionales, funciones
+* Ámbito y alcance (scope)
+* Arrays y loops (for, while, for...of)
+* Objetos e iteradores
+* Manejo de errores (try...catch)
+* Clases y herencia
+* Módulos
+* DOM y eventos
+* Accesibilidad web básica
+* Git y GitHub (commits diarios, repositorio personal)
+* Pruebas con Mocha (describe, it, assert)
+* Desarrollo de sitios web interactivos
+
+**Temas pendientes por reforzar:**
+
+* Uso de `find`, `filter`, `map`, `reduce` (en contexto de objetos)
+* Crear y consumir módulos en proyectos reales
+* Pruebas con datos más realistas y funciones propias
+* Reforzar herencia en clases y uso de super
+* Proyecto final que combine DOM, clases, módulos y pruebas
+
+**Nota:**
+Este archivo funcionará como "tumba burros" y mapa general de entrenamiento. Cualquier semana futura deberá sumar estos fundamentos y avanzar hacia temas como React, Redux, testing automatizado, estructuras de datos y entrevistas técnicas.
