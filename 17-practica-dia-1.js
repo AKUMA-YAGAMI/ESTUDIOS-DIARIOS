@@ -155,7 +155,7 @@ console.log(escuela.estudiantes)
 */
 
 
-
+/*
 
 const escuela = {
   estudiantes:[],
@@ -179,6 +179,150 @@ const escuela = {
 escuela.agregarEstudiantes('martin', 35, 'fisica')
 
 console.log(escuela.estudiantes)
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+const escuela ={
+  estudiantes:[],
+  agregarEstudiante(nombre, edad, curso){
+    const nuevoEstudiante ={
+      nombre:nombre,
+      edad:edad,
+      curso:curso
+    }
+    this.estudiantes.push(nuevoEstudiante)
+  },
+  expulsarEstudiante(nombre){
+    this.estudiantes.splice(nombre)
+    if(nombre !== nombre){
+console.log('estudiante no encontrado')
+    }
+    }
+  }
+
+
+
+  escuela.agregarEstudiante('lucas', 20, 'historia');
+  escuela.agregarEstudiante('ana', 22, 'biología');
+
+  console.log(escuela.estudiantes)
+
+escuela.expulsarEstudiante('pepe')
+*/
+/*
+
+const academia ={
+  alumnos:[],
+  inscribirAlumnos(nombre, edad){
+    const newEstudent = {
+      nombre:nombre,
+      edad:edad
+
+    }
+    this.alumnos.push(newEstudent)
+  },
+  mostrarAlumnos(){
+    let encontrarA = this.alumnos.map(function num(){
+      console.log(academia.alumnos)
+    })
+  }
+}
+
+academia.inscribirAlumnos('martin', 35)
+console.log(academia.alumnos)
+
+
+academia.mostrarAlumnos()*/
+/*
+const biblioteca ={
+libros:[],
+agregarLibro(titulo, año, autor){
+  const newBook = {
+    titulo:titulo,
+    año:año,
+    autor:autor
+  }
+  this.libros.push(newBook)
+},
+mostrarLibros(){
+  this.libros.forEach(function perro(libro){
+    console.log(libro.titulo)
+    console.log(libro.año)
+    console.log(libro.autor)
+  })
+},
+
+}
+
+
+biblioteca.agregarLibro('casper', 1990, 'esther y martin')
+biblioteca.agregarLibro('per', 190, 'esther')
+biblioteca.agregarLibro('caer', 990, '  martin')
+
+biblioteca.mostrarLibros()
+
+*/
+/*
+
+const veterinaria = {
+  mascotas:[],
+  registrarMascota(nombre, especie, edad){
+    const registro ={
+      nombre:nombre,
+      especie:especie,
+      edad:edad
+    }
+    this.mascotas.push(registro)
+  },
+  mostrarMascotas(){
+    this.mascotas.forEach(function (mascota){
+      console.log(`el nombre de esta mascota es ${mascota.nombre} especie ${mascota.especie} y su edad es ${mascota.edad}`)
+    })
+    
+  }
+}
+
+
+veterinaria.registrarMascota('lolo', 'perro', 50)
+veterinaria.registrarMascota('lolo', 'perro', 90)
+veterinaria.registrarMascota('lolo', 'perro', 70)
+
+console.log(veterinaria.mascotas)
+veterinaria.mostrarMascotas()
+*/
+
+const frutas = ['manzana', 'pera', 'platano']
+
+function buscadorFrutas(nombre){
+  const encontrada = frutas.find(function(fruta){
+    return fruta === nombre
+  });
+  if (encontrada) {
+    console.log(`Fruta encontrada: ${encontrada}`);
+  } else {
+    console.log("Fruta no encontrada");
+  }
+  }
+
+  buscadorFrutas("pera");    // Fruta encontrada: pera
+  buscadorFrutas("kiwi");
+
+
+
+
 
 
 
