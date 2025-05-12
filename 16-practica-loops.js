@@ -526,7 +526,7 @@ console.log(newM);
 
 
 
-
+/*
 
 let empleados = [
   { nombre: "Laura", sueldo: 1200, activo: true },
@@ -547,6 +547,42 @@ console.log(` Los trabajadores activos actualmentre son ${nombresM} los cuales t
 
 
 
+*/
+/*
+
+
+
+
+
+let inventario = [
+  { nombre: "Laptop", precio: 1200, stock: 4, vendidos: 2 },
+  { nombre: "Mouse", precio: 25, stock: 10, vendidos: 6 },
+  { nombre: "Teclado", precio: 75, stock: 5, vendidos: 5 },
+  { nombre: "Monitor", precio: 300, stock: 3, vendidos: 1 },
+  { nombre: "USB", precio: 10, stock: 20, vendidos: 15 }
+];
+
+
+
+let stockSi = inventario.filter(num => num.stock >= 1)
+
+let stockMa = stockSi.map(num => num.nombre.toUpperCase())
+
+let totalDi = inventario.reduce((acumu, num)=> acumu + (num.precio * num.vendidos), 0)
+
+
+console.log(`Productos disponibles ${stockMa.join(',')}. Con una valor de $ ${totalDi}.00`)
+
+
+
+
+/*Filtra los productos que aún tienen stock disponible.
+
+De esos productos, obtén una lista con los nombres en mayúsculas.
+
+Calcula el total de dinero generado por las ventas (precio * vendidos) de todos los productos.
+
+Muestra todo en un mensaje como este:*/
 
 
 
@@ -555,4 +591,94 @@ console.log(` Los trabajadores activos actualmentre son ${nombresM} los cuales t
 
 
 
+/*
 
+
+
+
+
+
+
+
+let cursos = [
+  { nombre: "JavaScript básico", duracion: 10, completado: true },
+  { nombre: "HTML y CSS", duracion: 8, completado: false },
+  { nombre: "Git y GitHub", duracion: 5, completado: true },
+  { nombre: "React", duracion: 12, completado: false },
+  { nombre: "Node.js", duracion: 9, completado: true }
+];
+
+
+
+let cursosCo = cursos.filter(num => num.completado === true)
+
+console.log(cursosCo)
+
+
+let mapC = cursosCo.map(num => num.nombre.toUpperCase())
+console.log(mapC)
+
+
+let duracionC = cursosCo.reduce((acumu, num)=> acumu + num.duracion,0)
+
+console.log(duracionC)
+
+
+
+console.log(`Los cursos actualmente completados son los siguientes : ${mapC.join(',')}. Los cuales tienen una duracion aproximada de ${duracionC} hrs en total. Como le quedo el ojo sensei? bromita por aqui `)
+
+
+/*   Filtrar solo los cursos completados.
+
+Convertir sus nombres a mayúsculas.
+
+Calcular la duración total de los cursos completados.
+
+Mostrarlo todo en un mensaje bonito. */
+
+
+
+
+
+
+
+const ventas = [
+  { producto: "camisa", precio: 250, cantidad: 3 },
+  { producto: "pantalón", precio: 400, cantidad: 2 },
+  { producto: "gorra", precio: 150, cantidad: 4 },
+  { producto: "camisa", precio: 250, cantidad: 1 },
+  { producto: "tenis", precio: 800, cantidad: 1 },
+  { producto: "pantalón", precio: 400, cantidad: 1 },
+];
+
+let myMap = ventas.map(num => num.precio * num.cantidad )
+let myFilter = ventas.filter(num=> num.cantidad >=1
+)
+
+
+let myReduce = ventas.reduce((acumu, num)=> acumu + (num.producto === "camisa" && num.precio * num.cantidad), 0)
+
+
+
+let myReduce1 = ventas.reduce((acumu, num)=> acumu + (num.producto === "tenis" && num.precio * num.cantidad), 0)
+
+
+
+let myReduce2 = ventas.reduce((acumu, num)=> acumu + (num.producto === "pantalón" && num.precio * num.cantidad), 0)
+
+
+let myReduce3 = ventas.reduce((acumu, num)=> acumu + (num.producto === "gorra" && num.precio * num.cantidad), 0)
+
+console.log(myReduce)
+
+
+console.log(`el total de tenis vendidos fue 1 $ ${myReduce} el total de gorras fueron 4 $ ${myReduce3} el total de pantalones fueron 3 $ ${myReduce2} por ultimo tenemos las camisas que fueron 4 $ ${myReduce} asi esta bien patron o que mas quiere `)
+
+/*
+🪙 Calcular el total de ingresos: la suma de precio × cantidad de cada venta.
+
+Obtener un array sin productos repetidos, solo los nombres de productos vendidos.
+
+ Saber cuántas camisas se vendieron en total.
+
+ Crear un resumen por producto, como este: */
