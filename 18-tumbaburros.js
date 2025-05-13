@@ -1,4 +1,4 @@
-/*
+
 
 // 1. forEach → Recorre cada elemento
 const frutas = ['manzana', 'pera', 'plátano'];
@@ -43,8 +43,8 @@ console.log('Animales después de splice:', animales);
 // Output: ['perro', 'conejo']
 
 
-*/
-/*
+
+
 const inventario = [
     { nombre: 'Monitor', categoria: 'Tecnología', precio: 3000, stock: 7 },
     { nombre: 'Mouse', categoria: 'Tecnología', precio: 500, stock: 12 },
@@ -167,10 +167,9 @@ pedro.descripcion()
 
 
 
-*/
 
 
-/*
+
 
 
 
@@ -215,8 +214,8 @@ class Carrito{
         }
     }
 
-*/
-/*
+
+
 class Cliente{
     constructor(nombre, correo){
         this.nombre = nombre,
@@ -253,7 +252,9 @@ let suscr = new Suscripcion(cliente1,'anual', 9000)
 console.log(suscr.detalle())
 
 
-*/
+
+
+
 
 
 
