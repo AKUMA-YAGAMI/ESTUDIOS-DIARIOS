@@ -45,12 +45,6 @@ console.log('Animales después de splice:', animales);
 
 */
 
-
-
-
-
-
-
 const inventario = [
     { nombre: 'Monitor', categoria: 'Tecnología', precio: 3000, stock: 7 },
     { nombre: 'Mouse', categoria: 'Tecnología', precio: 500, stock: 12 },
@@ -105,9 +99,9 @@ let reduces = inventario.reduce((acumu, num)=>{
       ];
 
 
-      let ind = usuarios.findIndex(num=>{
+      let ind = usuarios.findIndex(num=>
         num.rol === 'editor'
-      })
+      )
 
 if(ind !== -1){
     usuarios.splice(ind, 1)
@@ -122,3 +116,20 @@ console.log(usuarios)
 
 
 
+class Producto  {
+    constructor(nombre, precio, stock){
+this.nombre = nombre;
+this.precio =precio;
+this.stock = stock;
+    }
+mostrarDetalle(){
+    console.log(`Producto: ${this.nombre} | Precio: ${this.precio}  | Stock: ${this.stock} `)
+}
+
+}
+
+
+
+const cpu = new Producto('cpu', 33000, 32)
+
+cpu.mostrarDetalle()
