@@ -133,3 +133,38 @@ mostrarDetalle(){
 const cpu = new Producto('cpu', 33000, 32)
 
 cpu.mostrarDetalle()
+
+
+
+
+
+
+
+
+
+
+class Empleados{
+    constructor(nombre, puesto, salario){
+        this.nombre = nombre;
+        this.puesto = puesto;
+        this.salario = salario;
+    }
+    descripcion(){
+console.log(`"${this.nombre} trabaja como ${this.puesto} y gana ${this.salario}"`)
+    }
+}
+
+
+let juan = new Empleados('juan', 'programador', 123000)
+juan.descripcion()
+
+let pepe = new Empleados('pepe', 'programador', 223000)
+pepe.descripcion()
+
+let pedro = new Empleados('pedro', 'programador', 323000)
+pedro.descripcion()
+
+
+
+
+
