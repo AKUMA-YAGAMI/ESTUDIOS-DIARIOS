@@ -44,7 +44,7 @@ console.log('Animales después de splice:', animales);
 
 
 */
-
+/*
 const inventario = [
     { nombre: 'Monitor', categoria: 'Tecnología', precio: 3000, stock: 7 },
     { nombre: 'Mouse', categoria: 'Tecnología', precio: 500, stock: 12 },
@@ -163,6 +163,103 @@ pepe.descripcion()
 
 let pedro = new Empleados('pedro', 'programador', 323000)
 pedro.descripcion()
+
+
+
+
+*/
+
+
+/*
+
+
+
+
+
+class Producto{
+    constructor(nombre, precio, stock){
+        this.nombre=nombre;
+        this.precio=precio;
+        this.stock=stock;
+    }
+    vender(cantidad){
+        if (this.stock - cantidad >= 0){
+            this.stock -= cantidad;
+            return `"Venta realizada: ${cantidad} unidades de ${this.nombre}"`
+        
+        }else {
+            return `"No hay stock suficiente de ${this.nombre}"`
+        }
+    }
+}
+
+let Mouse = new Producto('Mouse', 350, 5)
+console.log(Mouse.vender(2))
+
+console.log(Mouse.vender(4))
+
+
+
+class Carrito{
+    constructor(productos){
+        this.productos = []
+    }
+    agregar(producto){
+        this.productos.push(producto)
+    }
+    mostrarCarrito(){
+        this.productos.forEach(num =>{
+            console.log(num)
+        })
+            
+        }
+    }
+
+*/
+/*
+class Cliente{
+    constructor(nombre, correo){
+        this.nombre = nombre,
+        this.correo = correo
+    }
+    mostrarInfo(){
+        console.log(`NOMBRE : ${this.nombre} | CORREO ${this.correo}`)
+    }
+}
+
+
+let cliente1 = new Cliente('Martin', 'casper@hotmail.com')
+
+cliente1.mostrarInfo()
+
+let cliente2 = new Cliente('Enrique', 'akuma@hotmail.com')
+
+cliente2.mostrarInfo()
+
+class Suscripcion{
+    constructor(cliente, tipo, precio){
+        this.cliente = cliente
+        this.tipo = tipo,
+        this.precio = precio
+    }
+    detalle(){
+      return  `${this.cliente.nombre} (${this.cliente.correo}) tiene una suscripción ${this.tipo} que cuesta $${this.precio}.`
+    }
+}
+
+
+let suscr = new Suscripcion(cliente1,'anual', 9000)
+
+console.log(suscr.detalle())
+
+
+*/
+
+
+
+
+
+
 
 
 
