@@ -570,3 +570,53 @@ console.log(nwTiendita.mostrarDisponibles())
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 ///EJEMPLO N.13
 
+class Producto22 {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.disponible = true;
+    }
+
+    marcarNoDisponible() {
+        this.disponible = false;
+    }
+}
+
+class Catalogo22 {
+    constructor() {
+        this.listaProductos = [];
+    }
+
+    agregarProducto(producto) {
+        this.listaProductos.push(producto);
+    }
+
+    mostrarDisponibles() {
+        return this.listaProductos.filter(pro => pro.disponible);
+    }
+
+    preciosConIVA() {
+        return this.listaProductos
+            .filter(pro => pro.disponible)
+            .map(pro => `nombre: ${pro.nombre} | precio: $${(pro.precio * 1.16).toFixed(2)}`);
+    }
+}
+
+// Instanciamos el catálogo
+const catalogo = new Catalogo22();
+
+// Creamos productos
+const coca = new Producto22('Coca-Cola', 22);
+const sprite = new Producto22('Sprite', 18);
+const fanta = new Producto22('Fanta', 20);
+
+// Agregamos productos al catálogo
+catalogo.agregarProducto(coca);
+catalogo.agregarProducto(sprite);
+catalogo.agregarProducto(fanta);
+
+// Mostramos los precios con IVA solo de productos disponibles
+console.log(catalogo.preciosConIVA());
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+///EJEMPLO N.14
