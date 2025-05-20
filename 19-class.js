@@ -1,3 +1,4 @@
+/*
 ////EJEMPLO N.1 /////////////////
 
 // EJEMPLO MAS BASICO DE CLASS UN SOLO CLASS
@@ -355,7 +356,7 @@ class Libro {
 ///EJEMPLO N.10
 
 
-/*
+
 
 
 class Tarea{
@@ -409,7 +410,7 @@ console.log('Tareas pendientes:', proyecto.mostrarTareasPendientes());
 
 //  Buscar una tarea por nombre
 console.log('Buscar tarea:', proyecto.buscarTarea('limpiar'));
-*/
+
 
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
@@ -618,5 +619,158 @@ catalogo.agregarProducto(fanta);
 // Mostramos los precios con IVA solo de productos disponibles
 console.log(catalogo.preciosConIVA());
 
+
+*/
+
+
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 ///EJEMPLO N.14
+
+
+class book{
+    constructor(titulo, autor){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.disponible = true
+    }
+    prestar(){
+        this.disponible = false
+    }
+    devolver(){
+        this.disponible = true
+    }
+    
+}
+
+class User{
+    constructor(nombre){
+        this.nombre =nombre;
+        this.libroPrestado = [];
+
+    }
+    tomarPrestado(libro){
+        if (libro.disponible ){
+this.libroPrestado.push(libro)
+libro.prestar();
+        }else {
+            console.log(`El libro "${libro.titulo}" no está disponible.`);
+        }
+    }
+}
+
+class Library{
+    constructor(nombre){
+        this.nombre = nombre;
+        this.libros = [];
+        this.usuarios = [];
+    }
+
+    agregarLibro(libro){
+        this.libros.push(libro)
+    }
+
+registrarUsuario(usuario){
+    this.usuarios.push(usuario)
+}
+prestarLibro(nombreUsuario, tituloLibro) {
+    const usuario = this.usuarios.find(u => u.nombre === nombreUsuario);
+    const libro = this.libros.find(l => l.titulo === tituloLibro);
+
+    if (!usuario) return `Usuario no registrado.`;
+    if (!libro) return `Libro no encontrado.`;
+
+    if (!libro.disponible) return `El libro ya está prestado.`;
+
+    usuario.tomarPrestado(libro);
+    return `Préstamo exitoso: "${tituloLibro}" para ${nombreUsuario}`;
+}
+
+}
+
+const library = new Library()
+
+const newbook1 = new book('señor de los anilos 1', 'yopi', true)
+const newbook2 = new book('señor de los anilos 2', 'yopi', true)
+const newbook3 = new book('señor de los anilos 3', 'yopi', true)
+
+library.agregarLibro(newbook1)
+library.agregarLibro(newbook2)
+library.agregarLibro(newbook3)
+
+
+const newUser1 = new User('martin gonzalez')
+const newUser2 = new User('karla gonzalez')
+
+const newUser3 = new User('enrique gonzalez')
+
+
+library.registrarUsuario(newUser1)
+library.registrarUsuario(newUser2)
+library.registrarUsuario(newUser3)
+
+
+console.log(library.usuarios)
+console.log(library.libros)
+console.log(library.prestarLibro('martin gonzalez', 'señor de los anilos 3' ))
+
+
+
+
+
+class Curso{
+    constructor(nombre, profesor){
+        this.nombre = nombre;
+        this.profesor = profesor;
+        this.estudiantes = []
+    }
+    inscribirEstudiante(estudiante){
+        this.estudiantes.push(estudiante)}}
+
+
+class Estudiante{
+    constructor(nombre, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+    presentarse(){
+        return `Hola mi nombre es ${this.nombre} y tengo ${this.edad} años de edad`
+    }
+}
+class Escuela{
+    constructor( nombre){
+        this.nombre = nombre;
+        this.cursos = [];
+
+    }
+    agregarCurso(curso){
+        return this.cursos.push(curso)
+    }
+    mostrarCursosDisponibles(){
+        return this.cursos
+    }
+
+}
+
+
+// --- Instancias ---
+const school = new Escuela('Academia del Código');
+
+const curso1 = new Curso('Programación', 'Madara Sensei');
+const curso2 = new Curso('Lógica', 'Hashirama Sensei');
+
+school.agregarCurso(curso1);
+school.agregarCurso(curso2);
+
+const estudiante1 = new Estudiante('Akuma', 35);
+const estudiante2 = new Estudiante('Ryu', 25);
+const estudiante3 = new Estudiante('Ken', 25);
+
+// --- Inscripciones ---
+curso1.inscribirEstudiante(estudiante1);
+curso1.inscribirEstudiante(estudiante2);
+curso2.inscribirEstudiante(estudiante3);
+
+// --- Pruebas ---
+console.log(estudiante1.presentarse());
+console.log('Cursos disponibles:', school.mostrarCursosDisponibles());
+console.log('Estudiantes en curso1:', curso1.estudiantes.map(e => e.nombre));
