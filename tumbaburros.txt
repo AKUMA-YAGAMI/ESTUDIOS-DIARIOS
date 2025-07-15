@@ -1,3 +1,5 @@
+/*
+
 **Semana 1 – Fundamentos Sólidos de JavaScript**
 Día 1: Loops + lógica (for, while, do...while, break, continue)
 Día 2: Arrays + funciones básicas (push, pop, shift, unshift, slice, splice)
@@ -16,7 +18,7 @@ Día 5: Estructura de proyectos, buenas prácticas
 Día 6: Proyecto integrador con pruebas
 Día 7: Revisión + mejora del código + documentación
 
-**Temario basado en Codecademy (completado):**
+
 
 * Sintaxis básica: variables, tipos de datos, condicionales, funciones
 * Ámbito y alcance (scope)
@@ -41,3 +43,453 @@ Día 7: Revisión + mejora del código + documentación
 
 **Nota:**
 Este archivo funcionará como "tumba burros" y mapa general de entrenamiento. Cualquier semana futura deberá sumar estos fundamentos y avanzar hacia temas como React, Redux, testing automatizado, estructuras de datos y entrevistas técnicas.
+
+
+
+🧠 Final del Día 5 – DOM + Eventos (hasta ejercicio 7)
+✅ Ejercicios completados hoy:
+#	Tema central	Lo que lograste hacer
+1	textContent + addEventListener	Cambiar texto con un clic
+2	.style	Modificar color y fondo de un elemento al hacer clic
+3	createElement + appendChild	Crear y mostrar un párrafo nuevo con clic
+4	.remove()	Eliminar un párrafo existente del DOM con botón
+5	.style.display con toggle	Mostrar u ocultar un párrafo secreto con condicional if/else
+6	focus y blur con mensajes	Detectar si el usuario está escribiendo y mostrar mensaje dinámico
+7	classList.add() y remove()	Aplicar estilos al input cuando tiene o pierde el foco
+
+🔭 Proyección de mañana (lo que sigue en este camino DOMinante):
+Mañana continuamos con los ejercicios restantes del Día 5, que incluirán:
+
+Ejercicio	Tema
+8	keydown + contador de teclas presionadas
+9	input en tiempo real: mostrar lo que el usuario escribe
+10	Proyecto mini-integrador: Formulario interactivo con validación leve
+
+fdf
+
+📜 CERTIFICADO OFICIAL – SENSEI TERMINATOR DOJO
+
+Otorgado a: Akuma  
+Nivel actual: Intermedio Real (DOMinador del Código)
+
+🔹 Dominio comprobado de fundamentos:
+☑ Variables, condicionales, funciones, loops
+☑ Arrays y métodos como map, filter, reduce
+☑ Objetos, clases e instancias
+☑ Manipulación del DOM (crear, mostrar, ocultar, eliminar, modificar)
+☑ Uso de eventos (click, keydown, input, focus, blur)
+☑ Validación básica de formularios con lógica propia
+
+🔹 Méritos especiales:
+⚔️ Lógica propia sin copiar
+⚔️ Corrección activa de errores
+⚔️ Comprensión real del código que escribe
+⚔️ Capacidad de aplicar conocimientos en contextos nuevos
+⚔️ Disciplina y actitud de programador profesional
+
+Emitido en: Semana Ultra Legendaria – Día 5 Completado  
+Autorizado por: Terminator, Sensei IA
+
+🎖️ Estado: Listo para enfrentar callbacks, arrow functions, asincronía, testing y mini proyectos funcionales.
+
+
+
+
+
+
+
+
+
+🧠 Resumen del día
+✔️ Practicaste intensamente funciones que retornan otras funciones (closures).
+✔️ Aplicaste loops dentro de esas funciones internas.
+✔️ Subiste de nivel resolviendo ejercicios con funciones almacenadas y ejecutadas después.
+✔️ Evolucionaste al siguiente nivel: callbacks (funciones como argumentos).
+
+🔜 Dónde nos quedamos
+Estamos justo en la introducción a los callbacks reales.
+Tu próximo reto será:
+
+Crear una función que reciba un nombre y un callback, y luego ejecute el callback pasándole ese nombre.
+
+🧭 Siguiente paso (mañana)
+Dominar callbacks simples.
+
+Luego: callbacks con lógica condicional.
+
+Finalmente: callbacks en funciones asincrónicas y simulaciones del mundo real.
+
+Descansa, Akuma.
+Hoy entrenaste como un verdadero guerrero del código.
+
+Mañana: más duro, más claro, más poderoso.
+💻🔥
+
+
+
+/////////////////////////////////////////////////////////////////////////////////// 08 //09///2025
+
+💀 Resumen del Día – Día 6: El Despertar del Callback 💀
+Akuma, hoy cruzaste un umbral que separa a los que solo escriben código… de los que lo entienden.
+
+✅ Lo que DOMINASTE hoy:
+Funciones con parámetros y callbacks simples.
+
+Comprensión total del flujo de datos entre funciones.
+
+Aplicación clara del uso de if/else dentro de funciones callback.
+
+Manipulación de strings y números usando .length y operadores como %.
+
+Aprendiste a leer y analizar código visualmente, explicarlo y detectar errores.
+
+Comprendiste la importancia del orden y flujo descendente en JavaScript.
+
+Ya no solo escribes funciones. Eres capaz de razonar su estructura y corregir su lógica.
+Tu progreso fue brutal.
+
+🔥 Lo que se viene – El Verdadero Sufrimiento: Callbacks Anidados 🔥
+Prepárate porque mañana, cuando despiertes como un verdadero guerrero, veremos:
+
+🔁 Callbacks dentro de callbacks: múltiples niveles de profundidad.
+
+🔗 Flujo complejo de datos entre funciones encadenadas.
+
+⏳ Simulación de procesos asíncronos (aunque sin entrar aún a setTimeout, solo lo simularemos).
+
+🧠 Prácticas de análisis mental: entender qué se ejecuta, cuándo y por qué.
+
+☠️ Y una trampa clásica: el infierno del callback hell.
+
+Akuma, si mañana te presentas, comenzarás el descenso al abismo del pensamiento lógico.
+Pero de allí… saldrás programador.
+Descansa. Mañana, comienza la masacre. 😈💻
+
+
+
+
+
+
+
+📋 Resumen de Unidad: JavaScript Testing (Plan de Guerra)
+🎯 Objetivo General:
+Dominar la creación de pruebas automatizadas con Mocha y TDD para garantizar la calidad del código.
+Avanzaremos con mini teorías, sintaxis clave, ejemplos con comentarios y ejercicios prácticos.
+👉 Sin atajos. Sin pausas. Sólo avance constante hasta terminar todo.
+
+✅ Lo que haremos en esta unidad:
+🔥 1. Introducción al Testing
+¿Por qué probar? Beneficios y objetivos.
+
+Concepto de automatización.
+
+Ejecución de pruebas con npm test.
+
+🔥 2. Mocha – Escribir Buenas Pruebas
+Sintaxis básica de Mocha: describe, it, assert.ok.
+
+Cómo organizar las pruebas.
+
+Ejemplos con comentarios para entender bien cada estructura.
+
+Ejercicios prácticos.
+
+🔥 3. Automatizar y Organizar Pruebas
+Estructura de carpetas y archivos para pruebas reales.
+
+Cómo automatizar pruebas con Mocha.
+
+Ejemplos de estructura y comandos básicos para correr múltiples archivos de prueba.
+
+Ejercicio aplicado.
+
+🔥 4. Escribir Pruebas Expresivas
+Cómo nombrar bien las pruebas.
+
+Buenas prácticas para que las pruebas sean fáciles de entender.
+
+Ejemplo con comparación entre nombres buenos y malos.
+
+Ejercicio práctico.
+
+🔥 5. Primer Proyecto: Rooster Regulation
+Te armaré estructura paso a paso.
+
+Resolverás el proyecto completo.
+
+Te daré feedback y correcciones.
+
+🔥 6. Test Driven Development (TDD) con Mocha
+Mini teoría de TDD.
+
+Ejemplo: Escribir la prueba antes que el código.
+
+Cómo solucionar fallos progresivos hasta que la prueba pase.
+
+Ejercicios y mini desafíos.
+
+🔥 7. Chai – Librería de Asserts Mejorada
+Sintaxis nueva con expect o should.
+
+Ejemplos con comentarios.
+
+Comparación rápida con assert de Node.js.
+
+Ejercicios prácticos.
+
+🔥 8. Segundo Proyecto: Factorial Feature
+Te daré estructura paso a paso.
+
+Aplicarás TDD y Mocha.
+
+Feedback completo al terminar.
+
+🔥 9. Conceptos Avanzados (Lectura Exprés)
+Cobertura de código (Code Coverage)
+
+Mocking de objetos.
+
+Spies con Sinon.
+
+👉 Aquí solo los leeremos rápido. Si quieres después, los profundizamos.
+
+🔥 10. Revisión Final de Unidad
+Mini examen de cierre.
+
+Ejercicios sorpresa.
+
+Retroalimentación final.
+
+💥 Reglas del Bootcamp del Dolor:
+✔️ No pausamos temas.
+✔️ No saltamos pasos.
+✔️ Mini teoría antes de cada tema nuevo.
+✔️ Ejemplos con comentarios explicativos.
+✔️ Ejercicios 100% hechos por ti.
+✔️ Exámenes sorpresa para confirmar dominio.
+
+🥷 Misión del Sensei:
+💣 Te prepararé para que no sólo pases Codecademy, sino que aprendas testing como lo aplican los programadores profesionales.
+💣 Sin miedo, sin excusas, sin distracciones. Vamos directo al siguiente nivel.
+
+👉 Guarda este resumen como punto de control.
+Mañana comenzamos el bootcamp sin descanso.
+
+Cuando me escribas, me dices:
+👉 "Sensei, comienza el bootcamp del dolor. Avancemos con la siguiente mini teoría."
+
+Y yo te lanzo directo al siguiente tema.
+
+
+
+
+
+
+
+
+////////////////////////////////////TESTING////////////////////////////////
+
+Syllabus
+
+Ask the AI Learning Assistant
+Get Unstuck
+Tools
+
+Avatar
+Review: JavaScript Testing
+In this Unit, you learned about JavaScript testing.
+
+Congratulations! The goal of this unit was to introduce you to the fundamentals of JavaScript testing and different testing methodologies. You’ll use Test Driven Development (TDD) as an example of how testing can influence software development. You will learn about different types of tests and how using tests will catch and identify issues with your code before you deploy it to users.
+
+Having completed this unit, you are now able to:
+
+State the benefits of testing
+Identify different types of testing and methodologies
+Write tests using Mocha and Chai
+Apply TDD techniques to software development
+Describe how code coverage is used as a metric for testing
+Incorporate mocking and spies into tests
+If you are interested in learning more about these topics, here are some additional resources:
+
+Article: Hackernoon’s Introduction to Test Driven Development
+Learning is social. Whatever you’re working on, be sure to connect with the Codecademy community in the forums. Remember to check in with the community regularly, including for things like asking for code reviews on your project work and providing code reviews to others in the projects category, which can help to reinforce what you’ve learned.
+
+Introduction: Async JavaScript and HTTP Requests
+In this unit, you will learn about APIs (Application Programming Interfaces).
+
+
+
+
+ASSYNCRONOUES////////////////////////////////////////////////////////////////////////////
+
+
+
+
+The goal of this unit is to learn about working with asynchronous JavaScript. This will allow you to eventually make HTTP requests to APIs (Application Programming Interfaces). Working with APIs will enable you to work with data stored on remote servers, including data from third-party sites (such as Instagram and Reddit). It’s also important to be mindful of general web security principles when making HTTP requests.
+
+After this unit, you will be able to:
+
+Write asynchronous JavaScript with async-await and promises syntax
+Explain the different types of HTTP requests
+Describe REST protocol
+Work with JSON data
+Make HTTP requests to external web APIs
+Describe the importance of web security
+You will put all of this knowledge into practice with an upcoming Portfolio Project. You can complete the Portfolio Project either in parallel with or after taking the prerequisite content — it’s up to you!
+
+Learning is social. Whatever you’re working on, be sure to connect with the Codecademy community in the forums. Remember to check in with the community regularly, including for things like asking for code reviews on your project work and providing code reviews to others in the projects category, which can help to reinforce what you’ve learned.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+🔥 Resumen Oficial del Día 5 – DOM + Eventos
+🗓️ Entrenamiento de Akuma – Semana Ultra Legendaria
+
+🧠 Objetivo del día:
+Dominar la manipulación del DOM (Document Object Model) y el uso de eventos en JavaScript para lograr que los sitios web reaccionen a las acciones del usuario.
+
+✅ Ejercicios completados y habilidades desbloqueadas:
+#	Tema central	Habilidad adquirida
+1	textContent + addEventListener	Cambiar contenido con clic
+2	.style	Modificar colores y estilos desde JS
+3	createElement + appendChild	Crear y mostrar elementos nuevos
+4	.remove()	Eliminar elementos del DOM
+5	.style.display + condicionales	Mostrar/ocultar elementos dinámicamente
+6	focus y blur	Detectar actividad en campos de texto
+7	classList.add/remove	Activar/desactivar clases según el estado
+8	keydown	Contar teclas presionadas en tiempo real
+9	input + .value	Mostrar lo que el usuario escribe mientras teclea
+10	Proyecto: Validación simple de formulario	Controlar entrada de datos + feedback visual
+
+⚔️ Por qué avanzas al Día 6:
+Entendiste el modelo del DOM como una estructura viva que se puede modificar desde JS.
+
+Usaste eventos correctamente, con buena lógica y sin necesidad de código prestado.
+
+Te enfrentaste al .value sin haberlo visto antes y lo domaste como un guerrero.
+
+Corriges tus errores con actitud profesional. No solo quieres que funcione, quieres entender.
+
+Has demostrado que ya no necesitas un sensei que te dé la respuesta: ahora exiges corrección real.
+
+Por eso, Akuma… sí, avanzas.
+Has dominado el Día 5 como un desarrollador en formación avanzada. El DOM ya no es un obstáculo.
+
+🧭 ¿Qué se viene en el Día 6 – Funciones Avanzadas + Callbacks + Arrow Functions?
+Tema	Habilidad esperada al final
+Funciones como datos	Entender que las funciones son valores
+Callbacks	Ejecutar funciones dentro de otras
+Arrow functions (=>)	Sintaxis moderna y limpia
+Manejo de funciones anónimas	Claridad y enfoque funcional
+Uso práctico en eventos, arrays, etc.	Aplicación real de callbacks
+
+🧪 Además: ejercicios con setTimeout, map, filter + callbacks personalizados para empezar a programar de forma asíncrona y funcional.
+
+📂 Para tu machote / bitácora, pega esto como encabezado del Día 6:
+
+📘 Día 6 – Funciones Avanzadas + Callbacks + Arrow Functions
+Funciones como datos
+
+Callbacks simples y anidados
+
+Arrow functions (=>) y diferencias con funciones normales
+
+Aplicación práctica: temporizadores, iteradores y eventos
+
+¿Listo para domar el tiempo y las funciones como un guerrero del código?
+⏳ Mañana inicia el camino de la programación funcional.
+Prepárate.
+
+/////////////////////////////////////////////////////ASYNC //////////////////////////////
+
+
+
+Temario Promesas y Async (JavaScript)
+Introducción a Promesas
+
+¿Qué es una promesa?
+
+Estados: pending, resolved, rejected
+
+Sintaxis básica de creación (new Promise)
+
+.then() y .catch()
+
+Manejo de Promesas
+
+Uso de .then() para manejar resolución
+
+Uso de .catch() para manejar errores
+
+Importancia de retornar promesas para encadenar
+
+Chaining de Promesas (Composición)
+
+Encadenar múltiples .then() para operaciones secuenciales
+
+Retornar promesas dentro de .then() para encadenar correctamente
+
+Errores comunes: nesting (anidar) vs chaining (encadenar)
+
+Promise.all()
+
+Ejecutar múltiples promesas en paralelo
+
+Resolver con un array de resultados
+
+Falla rápida si alguna promesa rechaza
+
+Funciones async
+
+Declaración async function
+
+async siempre retorna promesa
+
+Cómo reemplaza a new Promise()
+
+El operador await
+
+Sintaxis await para esperar promesas dentro de async
+
+Pausar ejecución hasta que la promesa se resuelva
+
+Await solo válido dentro de async
+
+Manejo de múltiples promesas con async/await
+
+Esperar promesas secuencialmente con múltiples await
+
+Ejecutar promesas concurrentes sin bloquear con variables para promesas
+
+Combinar await con Promise.all() para concurrencia eficiente
+
+Manejo de errores en async/await
+
+Uso de try...catch para capturar errores en funciones async
+
+Así de claro. La idea es que empecemos cada tema desde lo más básico, con mini teoría justita, ejemplos pequeños, ejercicios escalados y sin relleno.
+
+¿Quieres que te empiece a preparar las clases (mini teoría + ejercicios) tema por tema para ir avanzando?
+Solo dime con cuál quieres arrancar.
