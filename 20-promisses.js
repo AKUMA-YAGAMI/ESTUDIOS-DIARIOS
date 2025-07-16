@@ -114,14 +114,14 @@ verificarEdad
 
 
 
-
+/*
 
 
 const newUser = new Promise((resolve, reject) =>{
 const usuario = 'Akuma';
 const password = '1234';
 
-if (usuario.length >= 3 && password >= 3){
+if (usuario.length >= 3 && password.length >= 3){
     resolve(usuario)
 }else{
     reject('el nombre de usuario debe ser de mas de 3 letras al igual la contraseña')
@@ -134,3 +134,59 @@ newUser
 .then(user => user + ' estamos procesando tu informacion ........')
 .then(user =>{console.log(`tu nombre de usuario es ${user}  fuiste registrado exitosamente`)})
 .catch(err => console.log(err));
+
+*/
+
+
+/*
+const verificarProducto = new Promise((resolve, reject) => {
+    const producto = 'laptop'
+    const stock = 2
+
+if (producto === 'laptop' && stock >= 1){
+    resolve(`producto disponible : ${producto}`)
+}else{
+    reject('producto agotado')
+}
+
+
+});
+
+
+verificarProducto
+.then(produc => ` ${produc}`)
+.then(produc => console.log(`${produc} encontrado y disponible`))
+.catch(error => console.log('ERROR',error));
+
+
+*/
+
+
+
+
+
+const pedidoComida = new Promise((resolve, reject) => {
+const pedido = 'pizza'
+
+if (pedido === 'pizza'){
+    resolve('Preparando pizza')
+}else{
+    reject('producto no disponible')
+}
+
+
+
+});
+
+pedidoComida
+.then(pediComida => `${pediComida} 🍕`)
+.then(pediComida2 => `${pediComida2} , en horno`)
+.then(pediComida3 => console.log(pediComida3))
+.catch(err => console.log('error',err))
+
+
+
+
+
+
+
