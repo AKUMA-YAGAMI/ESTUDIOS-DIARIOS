@@ -493,3 +493,35 @@ Así de claro. La idea es que empecemos cada tema desde lo más básico, con min
 
 ¿Quieres que te empiece a preparar las clases (mini teoría + ejercicios) tema por tema para ir avanzando?
 Solo dime con cuál quieres arrancar.
+
+
+
+
+🔥 TE FALTA PARA CERRAR LA UNIDAD:
+🔸 Funciones async
+ Qué hace async function y por qué siempre devuelve una promesa
+
+ Reemplazar new Promise por async + return
+
+ Escribir funciones async con claridad
+
+🔸 El operador await
+ Usar await para pausar ejecución hasta que una promesa se resuelva
+
+ Demostrar que await solo se puede usar dentro de funciones async
+
+ Hacer ejercicios con await de forma secuencial
+
+🔸 Manejo de múltiples promesas con async/await
+ Usar varios await secuenciales
+
+ Ejecutar promesas concurrentes y luego usar await con Promise.all() para eficiencia
+
+ Crear ejemplos comparando ejecución secuencial vs concurrente
+
+🔸 Manejo de errores con try...catch
+ Envolver llamadas await en bloques try...catch
+
+ Lanzar errores personalizados dentro de funciones async
+
+ Demostrar cómo catch puede evitar el colapso de toda la app

@@ -77,6 +77,8 @@ numPositive
 
 */
 
+const { promises } = require("dns");
+
 
 
 
@@ -162,7 +164,7 @@ verificarProducto
 */
 
 
-
+/*
 
 
 const pedidoComida = new Promise((resolve, reject) => {
@@ -185,8 +187,110 @@ pedidoComida
 .catch(err => console.log('error',err))
 
 
+*/
+
+
+/*
+
+const prepararPizza = new Promise(resolve => {
+  setTimeout(() => resolve('Pizza lista'), 1000);
+});
+
+const enfriarRefresco = new Promise(resolve => {
+  setTimeout(() => resolve('Refresco frío'), 500);
+});
+
+const ponerMesa = new Promise(resolve => {
+  setTimeout(() => resolve('Mesa lista'), 1500);
+});
+
+Promise.all([prepararPizza, enfriarRefresco, ponerMesa])
+  .then(resultados => {
+    console.log('Todo listo:');
+    resultados.forEach(tarea => console.log(tarea));
+  })
+  .catch(err => console.log('¡Algo falló!', err));
+
+
+
+*/
 
 
 
 
 
+
+
+/////////////////////promise.all///////////////////////
+
+
+
+
+
+/*
+
+
+const calentarDojo = new Promise(resolve => {
+    setTimeout(() => resolve('dojo caliente'), 1000);
+});
+
+const afilarKatana = new Promise (resolve =>{
+    setTimeout(()=> resolve('katana afilada'), 500)
+});
+
+
+const ponerMusica = new Promise( resolve =>{
+    setTimeout(()=> resolve ('musicaa encendida'))
+});
+
+
+Promise.all([calentarDojo, afilarKatana, ponerMusica])
+.then(resultados=>{
+    console.log('todo listo :')
+    resultados.forEach(actividad => console.log(actividad))
+})
+.catch(err => console.log('error', err))
+
+*/
+
+/////////////////////////ASYNC///////////////////////
+
+
+async function traerUsuario (){
+    return 'akuma'
+}
+
+
+traerUsuario()
+.then(dato =>console.log(dato));
+
+
+
+/////////////////////////////////////////////Promise.resolve
+function traerUsuario() {
+  return Promise.resolve('akuma');
+}
+
+traerUsuario().then(dato => console.log(dato));
+
+
+///////////////////////////await//////////
+
+
+
+
+// Función asincrónica que devuelve una promesa con el valor 'akuma'
+async function traerUsuario() {
+  return 'akuma';
+}
+
+// Aquí se usa .then() (forma clásica de manejar promesas)
+traerUsuario().then(dato => console.log(dato));
+
+// Nueva forma usando async/await
+async function main() {
+  const respuesta = await traerUsuario();  // Esperamos el resultado de traerUsuario
+  console.log(respuesta);                 // Mostramos el resultado
+}
+
+main(); // Llamamos la función principal para que se ejecute
