@@ -294,3 +294,84 @@ async function main() {
 }
 
 main(); // Llamamos la función principal para que se ejecute
+
+
+
+
+/////////////////////////////////////////////////////new promise async await at the same time
+
+function obtenerNumero() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(42); // Esta línea es la que “resuelve” la promesa
+    }, 1000);
+  });
+}
+
+async function main() {
+  const numero = await obtenerNumero(); // Aquí esperamos que se resuelva la promesa
+  console.log(numero); // Se imprime 42 después de 1 segundo
+}
+
+main();
+
+////////////////////////////////////////////////async await pure
+
+async function pasoUno() {
+  return "Paso 1 completado";
+}
+
+async function pasoDos() {
+  return "Paso 2 completado";
+}
+
+async function ejecutar() {
+  const res1 = await pasoUno();
+  const res2 = await pasoDos();
+  console.log(res1);
+  console.log(res2);
+}
+
+ejecutar();
+
+
+//////////////////////////////////////////await Promise.all
+
+function tareaRapida(nombre) {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(`Tarea ${nombre} lista`), 1000);
+  });
+}
+
+async function main() {
+  const resultados = await Promise.all([
+    tareaRapida("A"),
+    tareaRapida("B"),
+    tareaRapida("C")
+  ]);
+
+  console.log("Resultados:", resultados);
+}
+
+main();
+
+////////////////////////////////////////////////////// async and catch trhow and try
+
+
+async function obtenerUsuario(id) {
+  if (!id) {
+    throw new Error("ID no válido");
+  }
+  return { id, nombre: "Akuma" };
+}
+
+async function main() {
+  try {
+    const user = await obtenerUsuario();
+    console.log("Usuario:", user);
+  } catch (error) {
+    console.error("Error atrapado:", error.message);
+  }
+}
+
+main();
